@@ -1,0 +1,9 @@
+project: savantenvs/nsjail
+target: nstun_frames
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/nstun_frames/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_nstun_frames
+    libfuzzer: true
+    timeout: 10

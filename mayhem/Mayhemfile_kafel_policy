@@ -1,0 +1,9 @@
+project: savantenvs/nsjail
+target: kafel_policy
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/kafel_policy/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_kafel_policy
+    libfuzzer: true
+    timeout: 10
